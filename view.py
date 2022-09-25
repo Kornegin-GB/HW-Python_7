@@ -26,3 +26,7 @@ def User_data_entry():
         "comment": comment
     }
     return directory_entry
+
+
+def view_result(data):
+    print(data)

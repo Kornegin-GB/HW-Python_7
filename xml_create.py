@@ -19,4 +19,4 @@ def File_recording(data):
 
 def File_reading():
     with open(NAME_FILE, "r") as directory:
-        print(directory.read())
+        return directory.read()

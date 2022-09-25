@@ -16,7 +16,7 @@ def Selection_processing():
 
 
 def Export_processing_csv():  # Экспорт файла
-    csv_create.File_reading()
+    view.view_result(csv_create.File_reading())
 
 
 def Import_processing_csv(data):  # Импорт файла
@@ -24,7 +24,7 @@ def Import_processing_csv(data):  # Импорт файла
 
 
 def Export_processing_xml():  # Экспорт файла
-    xml_create.File_reading()
+    view.view_result(xml_create.File_reading())
 
 
 def Import_processing_xml(data):  # Импорт файла
