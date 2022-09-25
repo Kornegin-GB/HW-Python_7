@@ -1,16 +1,17 @@
 def User_selection():
-    user_menu = ("Импорт справочника", "Экспорт справочника")
+    user_menu = ("Импорт справочника в CSV", "Экспорт справочника из CSV",
+                 "Импорт справочника в XML", "Экспорт справочника из XML")
     for i in enumerate(user_menu, 1):
         print(i[0], i[1])
     while True:
         try:
             number = int(input("Введите № пункта: "))
-            if 1 <= number <= 2:
+            if 1 <= number <= 4:
                 return number
             else:
                 raise ValueError
         except ValueError:
-            print("Введите число от 1 до 2: ")
+            print("Введите число от 1 до 4: ")
 
 
 def User_data_entry():

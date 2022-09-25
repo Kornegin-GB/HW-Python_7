@@ -1,19 +1,31 @@
 import view
-import csv_create as my_file
-# import xml_create as my_file
+import csv_create
+import xml_create
 
 
 def Selection_processing():
     selection = view.User_selection()
     if selection == 1:
-        Import_processing(view.User_data_entry())
+        Import_processing_csv(view.User_data_entry())
+    elif selection == 2:
+        Export_processing_csv()
+    elif selection == 3:
+        Import_processing_xml(view.User_data_entry())
     else:
-        Export_processing()
+        Export_processing_xml()
 
 
-def Export_processing():  # Экспорт файла
-    my_file.File_reading()
+def Export_processing_csv():  # Экспорт файла
+    csv_create.File_reading()
 
 
-def Import_processing(data):  # Импорт файла
-    my_file.File_recording(data)
+def Import_processing_csv(data):  # Импорт файла
+    csv_create.File_recording(data)
+
+
+def Export_processing_xml():  # Экспорт файла
+    xml_create.File_reading()
+
+
+def Import_processing_xml(data):  # Импорт файла
+    xml_create.File_recording(data)
