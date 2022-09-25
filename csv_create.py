@@ -1,3 +1,5 @@
+import re
+
 NAME_FILE = "phone directory.csv"
 
 
@@ -9,6 +11,8 @@ def File_recording(data):
 
 
 def File_reading():
+    lst = []
     with open(NAME_FILE, "r") as directory:
         for line in directory.read().split():
-            print(line.split(";"))
+            lst.append(line.split(";"))
+        return lst
